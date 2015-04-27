@@ -4,7 +4,7 @@ set encoding utf8
 
 set term png truecolor size 1024,768
 
-set output "dochody_wydatki.png"
+set output "dochody_wydatki_1.png"
 
 set arrow from 250,250 to 650,650
 
