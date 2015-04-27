@@ -1,0 +1,13 @@
+set termoption enhanced
+save_encoding = GPVAL_ENCODING
+set encoding utf8
+set datafile separator ","
+set term png truecolor size 1024,768
+set output "dochody_przyrost_1.png"
+set arrow from 250,0 to 650,0 nohead
+
+set xlabel "dochody budżetów na 1 mieszkańca"
+set ylabel "przyrost naturalny na 1000 mieszkańców"
+
+plot 'output.data' u 5:7:1 w labels font ",8" rotate point pt 7 offset char 1,0 notitle
+
