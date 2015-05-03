@@ -1,0 +1,20 @@
+set termoption enhanced
+save_encoding = GPVAL_ENCODING
+set encoding utf8
+set datafile separator ","
+set term png truecolor size 1024,768
+set output "bezrobocie_srednia_powiatow.png"
+
+province = "#99ffff"; county = "#4671d5"
+set auto x
+set style data histogram
+set style histogram cluster gap 1
+set style fill solid border -1
+set boxwidth 0.9
+set xtic scale 0 rotate right
+set key left
+plot 'output.data' u 8:xtic(1) ti col fc rgb province, \
+     '' u 9 ti col fc rgb county
+
+
+

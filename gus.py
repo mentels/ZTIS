@@ -74,7 +74,10 @@ def write_output(headers, data):
             line = province
             for prop in data[province]:
                 ## TODO: float?
-                line += ',%s' % prop
+                if isinstance(prop, float):
+                    line += ',%.2f' % prop
+                else:
+                    line += ',%s' % prop
             f.write(line.encode('utf8') + '\n')
 
 def read_unemployment_rate_from_xls(data):
@@ -85,19 +88,42 @@ def read_unemployment_rate_from_xls(data):
             if i == 16:
                 # 65 is an ASCII code for A
                 unemployment_rate_col = ord(line.strip()) - 65
+            elif i == 17:
+                county_code_col = ord(line.strip()) - 65
             else:
                 province = line.split()[0]
                 sheet_row = line.split()[1]
+                county_cnt = line.split()[2]
                 # -1 because numering starts from 0 in xlrd
                 province_as_key = unicode(province.strip(), encoding='utf8')
-                xls_description[province_as_key] = int(sheet_row) - 1
+                xls_description[province_as_key] = [int(sheet_row) - 1, int(county_cnt)]
     xls = xlrd.open_workbook(bezrobotni_xls)
     sheet = xls.sheet_by_name('10_14')
     for province in xls_description:
-        province_row = xls_description[province]
+        province_row = xls_description[province][0]
+        county_cnt = xls_description[province][1]
         unemployment_rate =  sheet.cell_value(province_row, unemployment_rate_col)
+        avg = calculate_avg_unemployment_by_county(sheet,
+                                                   province,
+                                                   xls_description,
+                                                   county_code_col,
+                                                   unemployment_rate_col)
         data[province].append(unemployment_rate)
-    return ['Stopa bezrobocia; koniec X 2014']
+        data[province].append(avg)
+    return ['Stopa bezrobocia; koniec X 2014', 'Średnia z powiatów']
+
+def calculate_avg_unemployment_by_county(sheet, province, xls_description, 
+                                         county_code_col, unemployment_rate_col):
+    province_row = xls_description[province][0]
+    county_cnt = xls_description[province][1]
+    county_row = 1
+    sum = 0
+    while county_cnt:
+        if not sheet.cell_value(province_row + county_row, county_code_col) == '00':
+            county_cnt -= 1
+            sum += sheet.cell_value(province_row + county_row, unemployment_rate_col)
+        county_row += 1
+    return sum / xls_description[province][1]
 
 def run():
     data =  load_provinces()
