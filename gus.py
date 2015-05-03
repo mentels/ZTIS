@@ -3,9 +3,12 @@
 
 from pyquery import PyQuery as pq
 from xml.etree.ElementTree import fromstring
+import xlrd
 
 base_url = 'http://stat.gov.pl/statystyka-regionalna/rankingi-statystyczne/%s'
 provinces_file = 'provinces.txt'
+bezrobotni_xls = 'bezrobotni_stopa_wg_powiatow_10_2014.xls'
+bezrobotni_xls_description = 'bezrobotni_stopa_wg_powiatow_10_2014_description.txt'
 
 def load_provinces():
     with open(provinces_file, 'r') as f:
@@ -74,6 +77,28 @@ def write_output(headers, data):
                 line += ',%s' % prop
             f.write(line.encode('utf8') + '\n')
 
+def read_unemployment_rate_from_xls(data):
+    unemployment_rate_col = 0
+    with open(bezrobotni_xls_description, 'r') as f:
+        xls_description = {}
+        for i, line in enumerate(f):
+            if i == 16:
+                # 65 is an ASCII code for A
+                unemployment_rate_col = ord(line.strip()) - 65
+            else:
+                province = line.split()[0]
+                sheet_row = line.split()[1]
+                # -1 because numering starts from 0 in xlrd
+                province_as_key = unicode(province.strip(), encoding='utf8')
+                xls_description[province_as_key] = int(sheet_row) - 1
+    xls = xlrd.open_workbook(bezrobotni_xls)
+    sheet = xls.sheet_by_name('10_14')
+    for province in xls_description:
+        province_row = xls_description[province]
+        unemployment_rate =  sheet.cell_value(province_row, unemployment_rate_col)
+        data[province].append(unemployment_rate)
+    return ['Stopa bezrobocia; koniec X 2014']
+
 def run():
     data =  load_provinces()
     headers = ['województwo']
@@ -83,6 +108,7 @@ def run():
     headers.extend(income_per_inhabitant_province(data))
     headers.extend(outcome_per_inhabitant_province(data))
     headers.extend(birthrate_for_1000_inhabitants_province(data))
+    headers.extend(read_unemployment_rate_from_xls(data))
     write_output(headers, data)
 
 

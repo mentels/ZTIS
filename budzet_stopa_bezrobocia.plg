@@ -1,0 +1,24 @@
+set termoption enhanced
+save_encoding = GPVAL_ENCODING
+set encoding utf8
+set datafile separator ","
+set term png truecolor size 1024,768
+
+# Dochody vs stopa bezrobocia
+
+set output "dochody_stopa_bezrobocia.png"
+
+set xlabel "dochody budżetów na 1 mieszkańca"
+set ylabel "stopa bezrobocia"
+
+plot 'output.data' u 5:8:1 w labels font ",8" rotate point pt 7 offset char 1,0 notitle
+
+# Wydatki vs stopa bezrobocia
+
+set output "wydatki_stopa_bezrobocia.png"
+
+set xlabel "wydatki budżetów na 1 mieszkańca"
+set ylabel "stopa bezrobocia"
+
+plot 'output.data' u 6:8:1 w labels font ",8" rotate point pt 7 offset char 1,0 notitle
+
