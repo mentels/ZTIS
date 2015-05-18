@@ -1,0 +1,463 @@
+00,00,POLSKA,1784.8,11.3
+02,00,DOLNOŚLĄSKIE,121.6,10.6
+02,00,podregion   jeleniogórski,27.6,14.3
+02,01,Bolesławiecki,2.8,9.0
+02,05,Jaworski,3.0,18.5
+02,06,Jeleniogórski,3.1,16.6
+02,07,Kamiennogórski,2.1,15.5
+02,10,Lubański,3.2,17.9
+02,12,Lwówecki,3.3,22.6
+02,25,Zgorzelecki,4.0,12.7
+02,26,Złotoryjski,3.6,24.6
+02,61,m. Jelenia Góra,2.5,7.2
+02,00,Podregion legnicko-głogowski,20.3,11.2
+02,03,Głogowski,4.2,13.7
+02,04,Górowski,2.6,23.3
+02,09,Legnicki,3.1,18.2
+02,11,Lubiński,3.4,8.9
+02,16,Polkowicki,2.8,7.5
+02,62,m. Legnica,4.3,9.1
+02,00,Podregion wałbrzyski,36.7,16.7
+02,02,Dzierżoniowski,4.8,16.0
+02,08,Kłodzki,12.4,23.3
+02,19,Świdnicki,6.2,10.8
+02,21,Wałbrzyski,3.4,24.7
+02,24,Ząbkowiecki,4.2,18.8
+02,65,m. Wałbrzych,5.8,13.1
+02,00,Podregion wrocławski,21.7,10.0
+02,13,Milicki,1.9,14.6
+02,14,Oleśnicki,4.5,12.3
+02,15,Oławski,3.0,9.0
+02,17,Strzelinski,2.1,14.9
+02,18,Średzki,1.9,10.5
+02,20,Trzebnicki,2.9,10.7
+02,22,Wołowski,2.9,17.5
+02,23,Wrocławski,2.5,4.4
+02,00,Podregion m. Wrocław,15.3,4.6
+02,64,m. Wrocław,15.3,4.6
+04,00,WOJ. KUJAWSKO-POMORSKIE,123.1,15.3
+04,00,Podregion bydgosko-toruński,30.9,9.5
+04,03,Bydgoski,4.7,11.9
+04,15,Toruński,5.9,17.9
+04,61,m. Bydgoszcz,12.6,7.8
+04,63,m. Toruń,7.7,8.6
+04,00,Podregion grudziądzki,33.1,17.3
+04,02,Brodnicki,3.9,13.2
+04,04,Chełmiński,3.5,20.0
+04,05,Golubsko-Dobrzyński,3.6,20.7
+04,06,Grudziądzki,2.9,20.8
+04,13,Sępoleński,2.6,19.4
+04,14,Świecki,5.1,15.0
+04,16,Tucholski,3.2,18.3
+04,17,Wąbrzeski,2.7,19.8
+04,62,m.Grudziądz,5.6,16.3
+04,00,Podregion włocławski,59.1,20.5
+04,01,Aleksandrowski,4.4,21.7
+04,07,Inowrocławski,12.0,19.7
+04,08,Lipnowski,5.5,23.2
+04,09,mogileński,3.1,18.4
+04,10,Nakielski,5.5,20.1
+04,11,Radziejowski,3.5,22.3
+04,12,Rypiński,2.9,17.6
+04,18,Włocławski,8.1,24.7
+04,19,Żniński,4.6,18.9
+04,64,m.Włocławek,9.4,19.0
+06,00,WOJ. LUBELSKIE,111.9,12.2
+06,00,Podregion bialski,18.2,14.8
+06,01,Bialski,6.1,13.9
+06,13,Parczewski,1.9,12.9
+06,15,Radzyński,3.5,13.5
+06,19,Włodawski,3.2,21.6
+06,61,m. Biała Podlaska,3.5,14.8
+06,00,Podregion chełmsko-zamojski,36.6,13.6
+06,02,Biłgorajski,3.5,7.4
+06,03,Chełmski,5.1,16.8
+06,04,Hrubieszowski,5.0,17.6
+06,06,Krasnostawski,4.5,15.5
+06,18,Tomaszowski,4.6,12.4
+06,20,Zamojski,6.0,13.8
+06,62,m. Chełm,3.7,15.7
+06,64,m. Zamość,4.2,14.4
+06,00,Podregion lubelski,32.5,10.3
+06,08,Lubartowski,5.5,15.5
+06,09,Lubelski,6.2,11.2
+06,10,Łęczyński,2.1,8.2
+06,17,Świdnicki,3.7,14.1
+06,63,m. Lublin,15.0,8.7
+06,00,Podregion puławski,24.6,11.7
+06,05,Janowski,3.1,12.8
+06,07,Kraśnicki,5.8,13.5
+06,11,Łukowski,4.4,9.9
+06,12,Opolski,3.6,13.5
+06,14,Puławski,4.8,9.6
+06,16,Rycki,3.0,13.5
+08,00,WOJ. LUBUSKIE,46.3,12.6
+08,00,Podregion gorzowski,16.0,11.1
+08,01,Gorzowski,2.1,8.8
+08,03,Międzyrzecki,4.0,19.6
+08,05,Słubicki,1.3,8.6
+08,06,Strzelecko-Drezdenecki,3.7,20.8
+08,07,Sulęciński,1.5,13.0
+08,61,m. Gorzów Wielkopolski,3.4,6.0
+08,00,Podregion zielonogórski,30.3,13.5
+08,02,Krośnieński,3.2,19.1
+08,04,Nowosolski,5.8,20.8
+08,08,Świebodziński,2.4,10.7
+08,09,Zielonogórski,4.1,13.5
+08,10,Żagański,4.6,20.8
+08,11,Żarski,4.3,13.1
+08,12,Wschowski,1.8,13.0
+08,62,m. Zielona Góra,4.2,7.2
+10,00,WOJ. ŁÓDZKIE,124.4,11.8
+10,00,Podregion łódzki,19.4,13.7
+10,06,Łódzki wschodni,3.0,11.2
+10,08,Pabianicki,6.2,14.0
+10,20,Zgierski,8.8,14.8
+10,21,Brzeziński,1.4,12.6
+10,00,Podregion m. Łódź,36.7,10.8
+10,61,m. Łódź,36.7,10.8
+10,00,Podregion piotrkowski,28.7,12.0
+10,01,Bełchatowski,6.0,10.9
+10,07,Opoczyński,4.1,13.5
+10,10,Piotrkowski,3.4,10.7
+10,12,Radomszczański,6.0,13.9
+10,16,Tomaszowski,5.6,12.6
+10,62,m. Piotrków Trybunalski,3.7,10.6
+10,00,Podregion sieradzki,22.7,12.2
+10,03,Łaski,3.1,15.8
+10,09,Pajęczański,2.3,11.2
+10,11,Poddębicki,2.2,13.0
+10,14,Sieradzki,6.3,12.1
+10,17,Wieluński,3.6,10.9
+10,18,Wieruszowski,1.5,8.5
+10,19,Zduńskowolski,3.7,14.1
+10,00,Podregion skierniewicki,16.9,11.3
+10,02,Kutnowski,6.4,15.6
+10,04,Łęczycki,3.0,14.1
+10,05,Łowicki,3.0,9.1
+10,13,Rawski,1.6,7.6
+10,15,Skierniewicki,1.0,6.8
+10,63,m. Skierniewice,1.8,9.8
+12,00,WOJ. MAŁOPOLSKIE,134.8,9.6
+12,00,Podregion krakowski,23.6,9.2
+12,01,Bocheński,3.7,9.6
+12,06,Krakowski,7.5,8.0
+12,08,miechowski,1.9,9.2
+12,09,myślenicki,4.7,10.5
+12,14,Proszowicki,2.0,10.7
+12,19,Wielicki,3.7,9.5
+12,00,Podregion m. Kraków,21.9,5.2
+12,61,m. Kraków,21.9,5.2
+12,00,Podregion nowosądecki,40.7,13.1
+12,05,Gorlicki,5.6,12.2
+12,07,Limanowski,8.7,15.8
+12,10,Nowosądecki,10.2,14.1
+12,11,Nowotarski,8.4,12.8
+12,17,Tatrzański,3.7,13.2
+12,62,m. Nowy Sącz,4.1,9.1
+12,00,Podregion oświęcimski,26.8,11.8
+12,03,Chrzanowski,5.6,13.6
+12,12,Olkuski,6.3,13.4
+12,13,Oświęcimski,5.6,11.3
+12,15,Suski,3.0,9.7
+12,18,Wadowicki,6.2,10.9
+12,00,Podregion tarnowski,21.8,11.8
+12,02,Brzeski,4.0,11.4
+12,04,Dąbrowski,4.0,16.8
+12,16,Tarnowski,8.7,12.5
+12,63,m. Tarnów,5.1,9.1
+14,00,WOJ. MAZOWIECKIE,248.6,9.8
+14,00,Podregion ciechanowsko-płocki,40.0,16.0
+14,02,Ciechanowski,5.1,15.3
+14,04,Gostyniński,3.7,20.7
+14,13,Mławski,3.9,13.2
+14,19,Płocki,6.7,18.6
+14,20,Płoński,5.6,16.3
+14,27,Sierpecki,4.2,22.5
+14,37,Żuromiński,3.4,20.6
+14,62,m. Płock,7.4,11.6
+14,00,Podregion ostrołęcko-siedlecki,43.0,14.0
+14,10,Łosicki,1.6,10.1
+14,11,Makowski,4.4,23.4
+14,15,Ostrołęcki,5.6,17.0
+14,16,Ostrowski,4.1,14.4
+14,22,Przasnyski,3.2,15.1
+14,24,Pułtuski,4.4,21.9
+14,26,Siedlecki,3.1,10.5
+14,29,Sokołowski,2.6,10.9
+14,33,Węgrowski,3.5,13.8
+14,35,Wyszkowski,3.3,11.1
+14,61,m. Ostrołęka,3.7,14.7
+14,64,m. Siedlce,3.5,9.7
+14,00,Podregion radomski,54.0,21.7
+14,01,Białobrzeski,1.7,12.5
+14,07,Kozienicki,4.0,15.9
+14,09,Lipski,2.3,14.3
+14,23,Przysuski,4.8,24.5
+14,25,Radomski,14.7,27.3
+14,30,Szydłowiecki,5.2,34.7
+14,36,Zwoleński,2.9,19.1
+14,63,m. Radom,18.4,20.3
+14,00,Podregion m.st. Warszawa,50.2,4.4
+14,65,m.st.Warszawa,50.2,4.4
+14,00,Podregion warszawski-wschodni,35.0,13.1
+14,03,Garwoliński,6.0,14.6
+14,08,Legionowski,4.7,14.8
+14,12,Miński,5.1,11.0
+14,14,Nowodworski,3.6,12.1
+14,17,Otwocki,3.8,8.5
+14,34,Wołomiński,11.8,15.9
+14,00,Podregion warszawski-zachodni,26.3,8.1
+14,05,Grodziski,2.2,6.7
+14,06,Grójecki,2.8,6.5
+14,18,Piaseczyński,5.7,7.8
+14,21,Pruszkowski,4.8,7.5
+14,28,Sochaczewski,3.7,10.4
+14,32,Warszawski  zachodni,3.0,5.8
+14,38,Żyrardowski,4.2,15.6
+16,00,WOJ. OPOLSKIE,41.3,11.7
+16,00,Podregion nyski,19.7,15.9
+16,01,Brzeski,5.3,18.2
+16,04,Kluczborski,2.5,12.2
+16,06,Namysłowski,2.4,16.6
+16,07,Nyski,6.6,15.6
+16,10,Prudnicki,3.0,16.8
+16,00,Podregion opolski,21.6,9.4
+16,02,Głubczycki,2.6,15.8
+16,03,Kędzierzyńsko-Kozielski,4.1,12.3
+16,05,Krapkowicki,2.2,8.4
+16,08,Oleski,2.0,8.5
+16,09,Opolski,4.6,12.1
+16,11,Strzelecki,1.9,8.2
+16,61,m. Opole,4.3,6.1
+18,00,WOJ. PODKARPACKIE,131.7,14.2
+18,00,Podregion krośnieński,31.2,14.7
+18,01,Bieszczadzki,1.7,18.8
+18,02,Brzozowski,6.2,21.3
+18,05,Jasielski,8.1,15.3
+18,07,Krośnieński,5.8,15.8
+18,17,Sanocki,4.9,12.0
+18,21,Leski,2.3,20.0
+18,61,m. Krosno,2.1,6.5
+18,00,Podregion przemyski,28.0,16.7
+18,04,Jarosławski,8.9,16.8
+18,09,Lubaczowski,3.6,14.8
+18,13,Przemyski,5.3,18.4
+18,14,Przeworski,5.5,16.3
+18,62,m. Przemyśl,4.6,16.5
+18,00,Podregion rzeszowski,37.5,13.0
+18,06,Kolbuszowski,3.5,14.5
+18,10,Łańcucki,5.6,17.7
+18,15,Ropczycko-Sędziszowski,5.4,19.3
+18,16,Rzeszowski,9.0,13.4
+18,19,Strzyżowski,5.5,20.7
+18,63,m. Rzeszów,8.5,7.6
+18,00,Podregion tarnobrzeski,35.2,13.6
+18,03,Dębicki,7.2,12.2
+18,08,Leżajski,4.9,17.8
+18,11,Mielecki,7.2,11.2
+18,12,Niżański,5.2,22.4
+18,18,Stalowowolski,5.3,12.0
+18,20,Tarnobrzeski,2.8,12.5
+18,64,m. Tarnobrzeg,2.6,13.9
+20,00,WOJ. PODLASKIE,58.9,12.8
+20,00,Podregion białostocki,26.6,13.4
+20,02,Białostocki,7.5,16.1
+20,11,Sokólski,4.1,14.9
+20,61,m. Białystok,14.9,12.0
+20,00,Podregion łomżyński,18.6,11.7
+20,03,Bielski,2.0,8.6
+20,05,Hajnowski,1.8,11.1
+20,06,Kolneński,2.8,17.6
+20,07,Łomżyński,2.3,11.9
+20,10,Siemiatycki,1.7,10.4
+20,13,Wysokomazowiecki,2.1,7.8
+20,14,Zambrowski,2.3,13.5
+20,62,m. Łomża,3.6,15.0
+20,00,Podregion suwalski,13.7,13.3
+20,01,Augustowski,3.4,16.6
+20,04,Grajewski,3.6,20.1
+20,08,Moniecki,1.8,11.5
+20,09,Sejneński,1.3,15.1
+20,12,Suwalski,0.9,7.0
+20,63,m. Suwałki,2.7,9.9
+22,00,WOJ. POMORSKIE,94.3,11.1
+22,00,Podregion gdański,21.1,12.2
+22,04,Gdański,3.1,8.5
+22,05,Kartuski,3.9,8.9
+22,10,Nowodworski,2.9,26.3
+22,11,Pucki,3.1,13.0
+22,15,Wejherowski,8.0,14.1
+22,00,Podregion słupski,30.5,17.0
+22,01,Bytowski,6.0,20.1
+22,02,Chojnicki,6.3,16.9
+22,03,Człuchowski,4.0,20.6
+22,08,Lęborski,3.6,17.4
+22,12,Słupski,6.2,19.2
+22,63,m. Słupsk,4.3,11.1
+22,00,Podregion starogardzki,24.1,14.5
+22,06,Kościerski,3.3,12.7
+22,07,Kwidzyński,3.9,13.0
+22,09,Malborski,3.9,21.2
+22,13,Starogardzki,6.2,14.9
+22,14,Tczewski,4.2,11.0
+22,16,Sztumski,2.6,22.5
+22,00,Podregion trójmiejski,18.6,5.6
+22,61,m. Gdańsk,12.0,5.7
+22,62,m. Gdynia,5.9,5.6
+22,64,m. Sopot,0.7,3.9
+24,00,WOJ. ŚLĄSKIE,174.9,9.6
+24,00,Podregion bielski,23.6,8.6
+24,02,Bielski,4.8,8.7
+24,03,Cieszyński,6.7,9.8
+24,17,Żywiecki,6.9,13.5
+24,61,m. Bielsko-Biała,5.1,5.2
+24,00,Podregion bytomski,21.0,14.3
+24,07,Lubliniecki,2.9,11.3
+24,13,Tarnogórski,5.2,10.4
+24,62,m. Bytom,10.3,19.1
+24,71,m. Piekary Śląskie,2.6,15.2
+24,00,Podregion częstochowski,28.4,13.5
+24,04,Częstochowski,8.1,18.2
+24,06,Kłobucki,4.0,12.4
+24,09,Myszkowski,3.8,15.3
+24,64,m. Częstochowa,12.5,11.4
+24,00,Podregion gliwicki,17.3,8.8
+24,05,Gliwicki,3.3,9.0
+24,66,m. Gliwice,6.6,6.5
+24,78,m. Zabrze,7.4,12.3
+24,00,Podregion katowicki,25.6,7.1
+24,63,m. Chorzów,4.4,10.8
+24,69,m. Katowice,10.0,4.8
+24,70,m. mysłowice,2.6,8.8
+24,72,m. Ruda Śląska,3.7,7.9
+24,74,m. Siemianowice Ślaskie,2.9,13.9
+24,76,m. Świętochłowice,1.9,15.0
+24,00,Podregion rybnicki,18.7,8.7
+24,11,Raciborski,2.7,7.3
+24,12,Rybnicki,1.9,11.1
+24,15,Wodzisławski,5.1,10.6
+24,67,m. Jastrzębie-Zdrój,3.4,8.4
+24,73,m. Rybnik,4.0,7.1
+24,79,m. Żory,1.7,9.5
+24,00,Podregion sosnowiecki,31.1,12.6
+24,01,Będziński,7.2,14.5
+24,16,Zawierciański,6.2,14.9
+24,65,m. Dąbrowa Górnicza,5.9,10.6
+24,68,m. Jaworzno,2.7,9.3
+24,75,m. Sosnowiec,9.2,12.7
+24,00,Podregion tyski,9.3,5.5
+24,08,mikołowski,2.6,6.6
+24,10,Pszczyński,2.4,5.2
+24,14,Bieruńsko-lędziński,1.2,4.7
+24,77,m. Tychy,3.1,5.2
+26,00,WOJ. ŚWIĘTOKRZYSKIE,73.8,13.9
+26,00,Podregion kielecki,48.4,15.5
+26,04,Kielecki,12.0,16.9
+26,05,Konecki,6.2,20.3
+26,07,Ostrowiecki,7.2,18.3
+26,10,Skarżyski,6.6,24.7
+26,11,Starachowicki,5.6,15.1
+26,61,m. Kielce,10.7,10.0
+26,00,Podregion sandomiersko-jędrzejowski,25.4,11.7
+26,01,Buski,2.6,7.3
+26,02,Jędrzejowski,4.7,13.4
+26,03,Kazimierski,2.0,12.3
+26,06,Opatowski,4.5,19.1
+26,08,Pińczowski,1.7,9.6
+26,09,Sandomierski,4.0,10.9
+26,12,Staszowski,3.3,10.5
+26,13,Włoszczowski,2.5,12.2
+28,00,WOJ. WARMIŃSKO-MAZURSKIE,93.3,18.1
+28,00,Podregion elbląski,34.1,18.2
+28,02,Braniewski,3.9,28.1
+28,03,Działdowski,5.4,22.5
+28,04,Elbląski,5.2,25.6
+28,07,Iławski,2.9,8.5
+28,12,Nowomiejski,3.0,19.0
+28,15,Ostródzki,7.1,19.9
+28,61,m. Elbląg,6.7,15.2
+28,00,Podregion ełcki,20.7,21.6
+28,05,Ełcki,6.4,21.5
+28,06,Giżycki,2.8,15.4
+28,13,Olecki,2.7,20.0
+28,16,Piski,4.9,28.3
+28,18,Gołdapski,1.8,19.8
+28,19,Węgorzewski,2.0,27.1
+28,00,Podregion olsztyński,38.5,16.5
+28,01,Bartoszycki,5.8,26.8
+28,08,Kętrzyński,5.4,26.9
+28,09,Lidzbarski,3.5,23.9
+28,10,Mrągowski,3.2,18.3
+28,11,Nidzicki,1.8,17.4
+28,14,Olsztyński,7.4,19.5
+28,17,Szczycieński,5.5,22.7
+28,62,m. Olsztyn,5.8,6.8
+30,00,WOJ. WIELKOPOLSKIE,115.3,7.7
+30,00,Podregion kaliski,21.0,7.6
+30,06,Jarociński,2.8,10.8
+30,07,Kaliski,2.1,6.8
+30,08,Kępiński,1.0,3.6
+30,12,Krotoszyński,2.7,8.1
+30,17,Ostrowski,4.8,7.6
+30,18,Ostrzeszowski,2.0,8.7
+30,20,Pleszewski,2.3,9.3
+30,61,m. Kalisz,3.3,7.0
+30,00,Podregion koniński,33.4,13.2
+30,03,Gnieźnieński,6.3,12.7
+30,09,Kolski,4.7,13.9
+30,10,Koniński,7.6,17.0
+30,23,Słupecki,3.4,14.8
+30,27,Turecki,3.1,8.5
+30,30,Wrzesiński,3.7,12.7
+30,62,m. Konin,4.6,12.6
+30,00,Podregion leszczyński,16.1,7.1
+30,04,Gostyński,3.1,10.0
+30,05,Grodziski,1.7,7.8
+30,11,Kościański,1.9,6.9
+30,13,Leszczyński,1.3,6.1
+30,14,Międzychodzki,0.9,7.8
+30,15,Nowotomyski,1.5,5.1
+30,22,Rawicki,2.2,9.1
+30,29,Wolsztyński,1.3,4.9
+30,63,m. Leszno,2.1,6.7
+30,00,Podregion pilski,19.2,12.6
+30,01,Chodzieski,2.5,13.8
+30,02,Czarnkowsko - Trzcianeck,3.8,12.1
+30,19,Pilski,5.3,10.1
+30,28,Wągrowiecki,3.8,16.0
+30,31,Złotowski,3.7,14.4
+30,00,podregion poznański ,15.0,5.7
+30,16,Obornicki,2.0,9.3
+30,21,Poznański,5.8,3.6
+30,24,Szamotulski,2.8,7.5
+30,25,Średzki,2.9,12.4
+30,26,Śremski,1.6,7.3
+30,00,podregion m. Poznań,10.7,3.3
+30,64,m. Poznań,10.7,3.3
+32,00,WOJ. ZACHODNIOPOMORSKIE,90.6,15.1
+32,00,Podregion koszaliński,37.3,18.0
+32,01,Białogardzki,4.3,26.3
+32,03,Drawski,4.4,21.9
+32,08,Kołobrzeski,2.9,10.5
+32,09,Koszaliński,4.5,23.7
+32,13,Sławieński,3.8,21.4
+32,15,Szczecinecki,6.1,23.9
+32,16,Świdwiński,3.4,22.8
+32,17,Wałecki,2.7,16.2
+32,61,m. Koszalin,5.1,10.5
+32,00,Podregion stargardzki,22.5,19.8
+32,02,Choszczeński,3.4,23.7
+32,05,Gryficki,4.3,22.1
+32,10,Myśliborski,3.2,15.2
+32,12,Pyrzycki,2.7,22.6
+32,14,Stargardzki,6.2,17.2
+32,18,Łobeski,2.7,24.7
+32,00,Podregion m. Szczecin,16.4,9.5
+32,62,m. Szczecin,16.4,9.5
+32,00,Podregion szczeciński,14.4,13.4
+32,04,Goleniowski,3.2,10.5
+32,06,Gryfiński,4.5,18.7
+32,07,Kamieński,3.0,20.4
+32,11,Policki,2.8,11.0
+32,63,m.  Świnoujście,1.0,7.0
