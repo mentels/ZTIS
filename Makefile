@@ -1,5 +1,8 @@
 .PHONY: dochody_wydatki_1 dochody_wydatki_2 dochody_przyrost bezrobocie_srednia_powiatow
 
+all: dochody_wydatki_1 dochody_wydatki_2 dochody_przyrost \
+	budzet_stopa_bezrobocia bezrobocie_srednia_powiatow
+
 dochody_wydatki_1:
 	gnuplot dochody_wydatki_1.plg
 
