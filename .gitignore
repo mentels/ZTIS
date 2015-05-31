@@ -60,3 +60,6 @@ output.data
 *.png
 
 .idea/
+.cabal-sandbox/
+haskell/cabal.sandbox.config
+haskell/cabal.config

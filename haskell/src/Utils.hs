@@ -16,6 +16,7 @@ import qualified Data.Text.ICU.Convert as C
 
 --TagSoup Utils
 
+
 classIs :: String -> Tag String -> Bool
 classIs cls (TagOpen _ attrs) = maybe False (isInfixOf cls) (lookup "class" attrs)
 classIs _ _ = False
