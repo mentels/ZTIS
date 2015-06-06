@@ -52,7 +52,8 @@ executable ztisCrawl
   -- Other library packages from which modules are imported.
   build-depends:       base ==4.6.*, text ==0.11.*, containers ==0.5.*, bytestring ==0.10.*, vector ==0.10.*,
                        cassava == 0.4.*, MissingH == 1.3.*, utf8-string == 1.*, multimap==1.2.*, http-conduit==2.1.*,
-                       tagsoup == 0.13.*, text-icu == 0.7.*, Histogram == 0.1.*, gnuplot == 0.5.*, regex-tdfa==1.2.*
+                       tagsoup == 0.13.*, text-icu == 0.7.*, Histogram == 0.1.*, gnuplot == 0.5.*, regex-tdfa==1.2.*,
+                       statistics == 0.13.*
   
   -- Directories containing source files.
   hs-source-dirs:      src

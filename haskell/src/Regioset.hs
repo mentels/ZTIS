@@ -18,6 +18,7 @@ import qualified Data.Csv as Csv
 import qualified Data.ByteString.Lazy as BL
 import qualified Data.Vector as V
 import qualified Data.ByteString.Lazy.Char8 as BLC
+import qualified Data.Vector.Generic as VG
 import Control.Monad
 import Control.Applicative
 import qualified Graphics.Histogram as GH
@@ -26,6 +27,7 @@ import qualified Graphics.Gnuplot.Frame.OptionSet as Opts
 import qualified Graphics.Gnuplot.Frame.Option as Opt
 import qualified Graphics.Gnuplot.Frame.OptionSet.Histogram as HistOpts
 import qualified Text.Regex.TDFA as R
+import qualified Statistics.Sample as Stats
 
 class PythonPrint a where
     pythonPrint :: a -> String
@@ -82,7 +84,7 @@ radniPowiatuUrlSuffix = "&dr=rady"
 -- main = writeUnemployedRateStats
 
 -- main :: IO ()
-main = writeCouncillorsStats
+main = writeUnemployedRateStats
 
 readUnemployedRate :: IO (M.Map String Double)
 readUnemployedRate = do
@@ -100,8 +102,19 @@ writeUnemployedRateStats = do
     rateMapping <- readUnemployedRate
     provinces <- load "regiosetProvincesCrawled.txt" :: IO [Province]
     let allCounties = concatMap counties provinces
-    let stats = map (calculateCountyStats rateMapping) allCounties
+        stats = map (calculateCountyStats rateMapping) allCounties
+        rates = map rate stats
+        diffs = map (abs . diff) stats
+        neighborsRates = map neighborsRate stats
+    printStats "allRates" rates
+    printStats "diffs" diffs
+    printStats "neighborsRates" neighborsRates
     plotUnemployedRatesNeihborsDiffHistogram stats
+
+printStats name list = print $ name ++ " = " ++ show (Stats.mean $ vecFromList list) ++ ", " ++ show (Stats.stdDev $ vecFromList list)
+
+vecFromList :: [a] -> V.Vector a
+vecFromList = VG.fromList
 
 calculateCountyStats :: M.Map String Double -> County -> UnemployedRateStats
 calculateCountyStats rateMapping county = UnemployedRateStats { regionName = countyName county, rate = r,
