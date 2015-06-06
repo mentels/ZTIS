@@ -129,8 +129,13 @@ plotUnemployedRatesNeihborsDiffHistogram stats =
 writeCouncillorsStats :: IO SE.ExitCode
 writeCouncillorsStats = do
     provinces <- load "regiosetProvincesCrawled.txt" :: IO [Province]
-    let allCouncillors = concatMap councillors $ concatMap counties provinces
+    let councillorsInCounties = map councillors $ concatMap counties provinces
+        age councillor = 2014 - fromIntegral (year councillor) :: Double
+        avgAge list = sum (map age list) / fromIntegral (length list)
+        avgAgeInCounties = map avgAge councillorsInCounties
+        allCouncillors = concat councillorsInCounties
     plotCouncillorsBirthYear allCouncillors
+    plotAvgCountyCouncillorsAge avgAgeInCounties
 
 plotCouncillorsBirthYear :: [Councillor] -> IO SE.ExitCode
 plotCouncillorsBirthYear councillors =
@@ -146,6 +151,20 @@ plotCouncillorsBirthYear councillors =
                 GH.defOpts hist
     in
     GH.plotAdv "councillorsBirthYearHistogram.png" opts hist
+
+plotAvgCountyCouncillorsAge :: [Double] -> IO SE.ExitCode
+plotAvgCountyCouncillorsAge ages =
+    let hist = GH.histogram GH.binSturges ages
+        opts =  Opts.add (Opt.custom "terminal" "") ["png size 1024,768 enhanced font 'Verdana,10'"] $
+                Opts.add (Opt.custom "encoding" "") ["utf8"] $
+                Opts.title "Sredni wiek radnych w powiecie" $
+                Opts.xLabel "Wiek" $
+                Opts.yLabel "Ilosc powiatow" $
+                HistOpts.clusteredGap 0.0 $
+--                 Opts.xRange2d (0, 15) $
+                GH.defOpts hist
+    in
+    GH.plotAdv "avgCountyCouncillorAgeHistogram.png" opts hist
 
 getOr0 key map = fromMaybe 0 $ M.lookup key map
 
