@@ -81,8 +81,8 @@ radniPowiatuUrlSuffix = "&dr=rady"
 -- main :: IO SE.ExitCode
 -- main = writeUnemployedRateStats
 
-main :: IO ()
-main = crawlAllProvinces
+-- main :: IO ()
+main = writeCouncillorsStats
 
 readUnemployedRate :: IO (M.Map String Double)
 readUnemployedRate = do
@@ -126,6 +126,26 @@ plotUnemployedRatesNeihborsDiffHistogram stats =
     in
     GH.plotAdv "unemployedNeighborsDiffHistogram.png" opts hist
 
+writeCouncillorsStats :: IO SE.ExitCode
+writeCouncillorsStats = do
+    provinces <- load "regiosetProvincesCrawled.txt" :: IO [Province]
+    let allCouncillors = concatMap councillors $ concatMap counties provinces
+    plotCouncillorsBirthYear allCouncillors
+
+plotCouncillorsBirthYear :: [Councillor] -> IO SE.ExitCode
+plotCouncillorsBirthYear councillors =
+    let years = map (fromIntegral . year) councillors
+        hist = GH.histogram GH.binSturges years
+        opts =  Opts.add (Opt.custom "terminal" "") ["png size 1024,768 enhanced font 'Verdana,10'"] $
+                Opts.add (Opt.custom "encoding" "") ["utf8"] $
+                Opts.title "Lata urodzin radnych powiatow" $
+                Opts.xLabel "Rok urodzenia" $
+                Opts.yLabel "Ilosc radnych" $
+                HistOpts.clusteredGap 0.0 $
+                Opts.xRange2d (0, 15) $
+                GH.defOpts hist
+    in
+    GH.plotAdv "councillorsBirthYearHistogram.png" opts hist
 
 getOr0 key map = fromMaybe 0 $ M.lookup key map
 
