@@ -1,0 +1,14 @@
+set termoption enhanced
+save_encoding = GPVAL_ENCODING
+set encoding utf8
+set datafile separator ","
+set term png truecolor size 1024,768
+set output "wiek_przyrost_powiaty_1.png"
+set arrow from 250,0 to 650,0 nohead
+
+set xlabel "wiek radnych"
+set ylabel "przyrost naturalny na 1000 mieszkańców"
+
+# plot './haskell/reports/countyStats.csv' u 5:6:1 w labels font ",8" rotate point pt 7 offset char 1,0 notitle
+plot './haskell/reports/countyStats.csv' u 5:6 pt 7 notitle
+
