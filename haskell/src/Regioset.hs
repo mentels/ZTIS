@@ -107,13 +107,6 @@ writeUnemployedRateStats = do
 readProvinces = load "regiosetProvincesCrawled.txt" :: IO [Province]
 
 
-allNeighboursPairs provinces =
-    let
-        allCounties = concatMap counties provinces
-        repeatName county = DL.repeat $ countyName county
-    in
-        concatMap (\c -> zip (repeatName c) (neighbors c))
-
 
 printStats name list = print $ name ++ " = " ++ show (Stats.mean $ vecFromList list) ++ ", " ++ show (Stats.stdDev $ vecFromList list)
 
@@ -228,3 +221,14 @@ parseRegiosetPages :: [String] -> IO [[Tag String]]
 parseRegiosetPages = mapM (parsePage encoding . (regiosetUrlPrefix ++))
 
 
+plotHistogram plotData title xlabel ylabel fileName = do
+    let hist = GH.histogram GH.binSturges plotData
+        opts =  Opts.add (Opt.custom "terminal" "") ["png size 1024,768 enhanced font 'Verdana,10'"] $
+                Opts.add (Opt.custom "encoding" "") ["utf8"] $
+                Opts.title title $
+                Opts.xLabel xlabel $
+                Opts.yLabel ylabel $
+                HistOpts.clusteredGap 0.0 $
+--                 Opts.xRange2d (0, 15) $
+                GH.defOpts hist
+    GH.plotAdv fileName opts hist
