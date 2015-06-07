@@ -44,7 +44,7 @@ cabal-version:       >=1.8
 
 executable ztisCrawl
   -- .hs or .lhs file containing the Main module.
-   main-is: Regioset.hs
+   main-is: Reports.hs
   
   -- Modules included in this executable, other than Main.
   -- other-modules:       

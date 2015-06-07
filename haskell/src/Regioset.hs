@@ -1,4 +1,5 @@
 {-# LANGUAGE ScopedTypeVariables #-}
+module Regioset where
 
 import Utils
 import Data.Char
@@ -28,6 +29,7 @@ import qualified Graphics.Gnuplot.Frame.Option as Opt
 import qualified Graphics.Gnuplot.Frame.OptionSet.Histogram as HistOpts
 import qualified Text.Regex.TDFA as R
 import qualified Statistics.Sample as Stats
+import qualified Demographic as D
 
 class PythonPrint a where
     pythonPrint :: a -> String
@@ -43,12 +45,7 @@ instance Csv.ToRecord UnemployedRateStats where
     toRecord (UnemployedRateStats regionName rate neighborsRate diff) = Csv.record [Csv.toField regionName, Csv.toField rate, Csv.toField neighborsRate, Csv.toField diff]
 instance Csv.FromRecord UnemployedRate where
     parseRecord v
-        | V.length v == 5 = UnemployedRate <$>
-                          v Csv..! 0 <*>
-                          v Csv..! 1 <*>
-                          v Csv..! 2 <*>
-                          v Csv..! 3 <*>
-                          v Csv..! 4
+        | V.length v == 5 = UnemployedRate <$> v Csv..! 0 <*> v Csv..! 1 <*> v Csv..! 2 <*> v Csv..! 3 <*> v Csv..! 4
         | otherwise     = mzero
 
 instance PythonPrint Councillor where
@@ -77,14 +74,10 @@ graphFileName = "graph.txt"
 provincesStartText = "po wyborach w listopadzie 2014 r."
 provincesEndText = "Olgierd GEBLEWICZ"
 encoding = "iso88592"
-unemployedCsvFilePath = "bezrobotni_stopa_wg_powiatow_10_2014.csv"
+unemployedCsvFilePath = "resources/bezrobotni_stopa_wg_powiatow_10_2014.csv"
 radniPowiatuUrlSuffix = "&dr=rady"
 
--- main :: IO SE.ExitCode
--- main = writeUnemployedRateStats
 
--- main :: IO ()
-main = writeUnemployedRateStats
 
 readUnemployedRate :: IO (M.Map String Double)
 readUnemployedRate = do
@@ -100,7 +93,7 @@ readUnemployedRate = do
 writeUnemployedRateStats :: IO SE.ExitCode
 writeUnemployedRateStats = do
     rateMapping <- readUnemployedRate
-    provinces <- load "regiosetProvincesCrawled.txt" :: IO [Province]
+    provinces <- readProvinces
     let allCounties = concatMap counties provinces
         stats = map (calculateCountyStats rateMapping) allCounties
         rates = map rate stats
@@ -110,6 +103,17 @@ writeUnemployedRateStats = do
     printStats "diffs" diffs
     printStats "neighborsRates" neighborsRates
     plotUnemployedRatesNeihborsDiffHistogram stats
+
+readProvinces = load "regiosetProvincesCrawled.txt" :: IO [Province]
+
+
+allNeighboursPairs provinces =
+    let
+        allCounties = concatMap counties provinces
+        repeatName county = DL.repeat $ countyName county
+    in
+        concatMap (\c -> zip (repeatName c) (neighbors c))
+
 
 printStats name list = print $ name ++ " = " ++ show (Stats.mean $ vecFromList list) ++ ", " ++ show (Stats.stdDev $ vecFromList list)
 
@@ -179,7 +183,6 @@ plotAvgCountyCouncillorsAge ages =
     in
     GH.plotAdv "avgCountyCouncillorAgeHistogram.png" opts hist
 
-getOr0 key map = fromMaybe 0 $ M.lookup key map
 
 
 crawlAllProvinces :: IO ()

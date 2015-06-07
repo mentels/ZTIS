@@ -81,3 +81,4 @@ save x f = writeFile f (show x)
 
 
 
+getOr0 key map = fromMaybe 0 $ M.lookup key map
