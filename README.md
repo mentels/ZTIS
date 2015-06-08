@@ -12,5 +12,12 @@ to the `output.txt` file. The second one will plot the graphs and save
 them in the current directory.
 
 ## Running REGIOset.pl analyzer ##
+install haskell and cabal: https://www.haskell.org/platform/
 
-TODO
+cd haskell
+cabal sandbox init
+cabal install
+./.cabal-sandbox/bin/ztisCrawl
+
+This command will use already crawled data in resources directory to generate histograms. 
+
